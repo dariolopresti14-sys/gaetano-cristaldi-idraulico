@@ -103,7 +103,7 @@ async function sendConfirmationEmail(Review) {
             Cordiali saluti,<br>
             <strong>Gaetano Cristaldi</strong><br>
             Idraulico Professionista<br>
-            📞 +39 333 123 4567
+            📞 +39 340 7195649
           </p>
         </div>
        </body>
