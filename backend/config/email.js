@@ -3,7 +3,7 @@
 
 const { Resend } = require('resend');
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+//const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendNewReviewEmail(Review) {
     const resend= new Resend(process.env.RESEND_API_KEY);
