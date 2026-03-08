@@ -6,6 +6,7 @@ const { Resend } = require('resend');
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendNewReviewEmail(Review) {
+    const resend= new Resend(process.env.RESEND_API_KEY);
     const starsHTML = '⭐'.repeat(Review.rating);
     
     try {
@@ -59,6 +60,7 @@ async function sendNewReviewEmail(Review) {
 }
 
 async function sendConfirmationEmail(Review) {
+    const resend= new Resend(process.env.RESEND_API_KEY);
     try {
         await resend.emails.send({
             from: 'TermoIdraulica <onboarding@resend.dev>',
