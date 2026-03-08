@@ -6,7 +6,7 @@ const cors= require('cors');
 const dotenv= require('dotenv');
 const path= require('path');
 
-dotenv.config({ path: path.join(__dirname, '..', '.env') });//carica variabili ambiente
+dotenv.config();//carica variabili ambiente
 
 console.log('🔗 FRONTEND_URL:', process.env.FRONTEND_URL);
 
