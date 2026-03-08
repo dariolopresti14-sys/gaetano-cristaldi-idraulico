@@ -12,24 +12,7 @@ console.log('🔗 API URL:', API_URL);
 // ==========================================
 // ARRAY RECENSIONI FITTIZIE (FALLBACK)
 // ==========================================
-const reviewsData = [
-    {
-        id: 1,
-        name: "Maria S.",
-        rating: 5,
-        text: "Gaetano è un vero professionista! Ha ristrutturato il mio bagno perfettamente.",
-        date: "18 Gennaio 2026",
-        isNew: false
-    },
-    {
-        id: 2,
-        name: "Giuseppe R.",
-        rating: 5,
-        text: "Pronto intervento rapido e efficace. Prezzi onesti!",
-        date: "10 Gennaio 2026",
-        isNew: false
-    }
-];
+const reviewsData = [];
 
 // Variabile globale per le recensioni attuali
 let currentReviews = reviewsData;
