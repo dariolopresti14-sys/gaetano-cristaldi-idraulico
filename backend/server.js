@@ -7,6 +7,8 @@ const dotenv= require('dotenv');
 const path= require('path');
 
 dotenv.config();//carica variabili ambiente
+console.log('🔍 MONGODB_URI:', process.env.MONGODB_URI ? 'definita' : 'undefined');
+console.log('🔍 Tutte le env:', Object.keys(process.env).filter(k => !k.includes('npm')));
 
 console.log('🔗 FRONTEND_URL:', process.env.FRONTEND_URL);
 
