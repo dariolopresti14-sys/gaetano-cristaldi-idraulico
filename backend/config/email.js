@@ -12,7 +12,7 @@ async function sendNewReviewEmail(Review) {
     
     try {
         await resend.emails.send({
-            from: 'TermoIdraulica <onboarding@resend.dev>',
+            from: 'TermoIdraulica <noreply@termoidraulicacristaldi.com>',
             to: process.env.ADMIN_EMAIL,
             subject: `🔔 Nuova Recensione da ${Review.name} (${Review.rating}⭐)`,
             html: `
