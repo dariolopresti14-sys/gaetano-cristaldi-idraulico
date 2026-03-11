@@ -64,7 +64,7 @@ async function sendConfirmationEmail(Review) {
     const resend= new Resend(process.env.RESEND_API_KEY);
     try {
         await resend.emails.send({
-            from: 'TermoIdraulica <onboarding@resend.dev>',
+            from: 'TermoIdraulica <noreply@termoidraulicacristaldi.com>',
             to: Review.email,
             subject: '✅ Grazie per la tua recensione!',
             html: `
