@@ -6,7 +6,7 @@ const { Resend } = require('resend');
 //const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendNewReviewEmail(Review) {
-    console.log('🔑 RESEND_API_KEY:', process.env.RESEND_API_KEY ? 'presente' : 'undefined');
+    console.log('🔑 RESEND_API_KEY inizio:', process.env.RESEND_API_KEY?.substring(0, 10));
     const resend= new Resend(process.env.RESEND_API_KEY);
     const starsHTML = '⭐'.repeat(Review.rating);
     
