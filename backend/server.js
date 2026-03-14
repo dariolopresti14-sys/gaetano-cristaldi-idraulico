@@ -54,6 +54,19 @@ app.get('/admin', (req, res) => {
 
 //route principale
 
+app.get('/sitemap.xml', (req, res) => {
+    res.header('Content-Type', 'application/xml');
+    res.send(`<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://termoidraulicacristaldi.com</loc>
+        <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+        <priority>1.0</priority>
+    </url>
+</urlset>`);
+
+});
+
 app.use((req, res) => {
     res.status(404).json({ success: false, message: 'Endpoint non trovato' });
 
@@ -75,18 +88,7 @@ app.listen(PORT, '0.0.0.0', () => {
 
 });
 
-app.get('/sitemap.xml', (req, res) => {
-    res.header('Content-Type', 'application/xml');
-    res.send(`<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://termoidraulicacristaldi.com</loc>
-        <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-        <priority>1.0</priority>
-    </url>
-</urlset>`);
 
-});
 
 //Avvio del server
 //con questo file accendo il server sulla porta 3000, mi connetto a mongoDB, servo i file html nella cartella frontend e gestisco gli eventuali errori
